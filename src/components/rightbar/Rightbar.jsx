@@ -1,19 +1,76 @@
 import React from 'react'
 import './rightbar.css'
+import birt from '../../assets/birthday.png'
+import img1 from "../../assets/portfolio2.jpg"
+
+import friImg from "../../assets/me-about.jpg"
 const Rightbar = () => {
 
 
-  const money_con=(money)=>{
-
-    return (Math.abs(Number(money))>=1.0e+9 ?
-     (Math.abs(Number(money))/1.0e+9).toFixed(2)+"B": 
-     Math.abs(Number(money))>=1.0e+6 ? 
-     (Math.abs(Number(money))/1.0e+6).toFixed(2)+"M":
-     Math.abs(Number(money))>=1.0e+3 ? 
-     (Math.abs(Number(money))/1.0e+3).toFixed(2)+"K": Math.abs(Number(money)))
-    }
+ 
   return (
-    <div className='rightbar'>{money_con(2000)}</div>
+    <div className='rightbar'>
+      <div className="rightbarWrapper">
+      
+      <div className="birthdayContainer">
+        <img src={birt} alt="" className="birthdayImg" />
+        <span className="birthdayText"><b>John Momo</b> and <b>3 Other friends</b> have birthday Today</span>
+      </div>
+      <img src={img1} alt="" className="rightbarAd" />
+      <h4 className="rightbarTitle">Online Friends</h4>
+      <ul className="rightbarFriendList">
+        <li className="rightBarFriend">
+          <div className="rightbarProfileImgContainer">
+            <img src={friImg} alt="" className="rightbarProfileImg" />
+            <span className="rightbarOnline"></span>
+          </div>
+          <span className="rightbarUsername">Robert Joe</span>
+        </li>
+        <li className="rightBarFriend">
+          <div className="rightbarProfileImgContainer">
+            <img src={friImg} alt="" className="rightbarProfileImg" />
+            <span className="rightbarOnline"></span>
+          </div>
+          <span className="rightbarUsername">Robert Joe</span>
+        </li>
+        <li className="rightBarFriend">
+          <div className="rightbarProfileImgContainer">
+            <img src={friImg} alt="" className="rightbarProfileImg" />
+            <span className="rightbarOnline"></span>
+          </div>
+          <span className="rightbarUsername">Robert Joe</span>
+        </li>
+        <li className="rightBarFriend">
+          <div className="rightbarProfileImgContainer">
+            <img src={friImg} alt="" className="rightbarProfileImg" />
+            <span className="rightbarOnline"></span>
+          </div>
+          <span className="rightbarUsername">Robert Joe</span>
+        </li>
+        <li className="rightBarFriend">
+          <div className="rightbarProfileImgContainer">
+            <img src={friImg} alt="" className="rightbarProfileImg" />
+            <span className="rightbarOnline"></span>
+          </div>
+          <span className="rightbarUsername">Robert Joe</span>
+        </li>
+        <li className="rightBarFriend">
+          <div className="rightbarProfileImgContainer">
+            <img src={friImg} alt="" className="rightbarProfileImg" />
+            <span className="rightbarOnline"></span>
+          </div>
+          <span className="rightbarUsername">Robert Joe</span>
+        </li>
+        <li className="rightBarFriend">
+          <div className="rightbarProfileImgContainer">
+            <img src={friImg} alt="" className="rightbarProfileImg" />
+            <span className="rightbarOnline"></span>
+          </div>
+          <span className="rightbarUsername">Robert Joe</span>
+        </li>
+      </ul>
+      </div>
+      </div>
   )
 }
 
